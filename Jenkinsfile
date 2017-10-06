@@ -1,5 +1,6 @@
 node {
    echo 'Hello World'
+}
    String[][] buildChains = [
   ['master'],
   ['branch1', 'master'],
@@ -44,4 +45,4 @@ def buildBranch( String branch )    {
 String repeat( String s, int count ) {
   return count > 0 ? s + repeat( s, --count ) : ""
   }
-}
+
