@@ -1,5 +1,10 @@
 node {
    echo 'Hello World'
+  emailext.attachLog: true, 
+subject: "Jenkins Job.failed", 
+to: 'aya.ghaafar1@vodafone.com',
+body: """Dears,Kindly.be informed that the job.has.failed, please find the logs attached to this email.ThanksDeployment CoE""" 
+
 }
    String[][] buildChains = [
   ['master'],
