@@ -2,7 +2,7 @@ pipeline {
     agent any
 	parameters
 	  {	VERSION = VersionNumber projectStartDate: '2017-09-13', versionNumberString: '${BUILDS_ALL_TIME}', versionPrefix: '0.0.'
-	    string(name: 'VERSION', defaultValue: '${env.VERSION}', versionPrefix: '0.0.'', description: 'pass version value')
+	    string(name: 'VERSION', defaultValue: '${env.VERSION}', versionPrefix: '0.0.', description: 'pass version value')
 
 	  }
     stages {
