@@ -2,7 +2,7 @@ pipeline {
     agent any
 	parameters
 	  {
-	    string(name: 'VERSION', defaultValue: '${env.VERSION}', description: 'pass version value')
+	    string(name: 'VERSION', defaultValue: 'VersionNumber projectStartDate: '2017-09-13', versionNumberString: '${BUILDS_ALL_TIME}', versionPrefix: '0.0.'', description: 'pass version value')
 
 	  }
     stages {
@@ -10,9 +10,8 @@ pipeline {
  	 {
 	    steps
 	    {
-	    build job: 'BUILD/CMTest2/' + env.VERSION.replaceAll("/", "%2F"), wait: false, parameters: [string(name: 'VERSION', value: params.VERSION), string(name: 'PASS_VERSION', value: env.VERSION)]
+	    build job: 'test\branch' , wait: false, parameters: [string(name: 'VERSION', value: params.VERSION), string(name: 'PASS_VERSION', value: env.VERSION)]
 	    }
  	 }
   }
 }
-
