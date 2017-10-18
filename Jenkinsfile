@@ -10,7 +10,7 @@ pipeline {
  	 {
 	    steps
 	    {
-	    build job: 'test\branch' , wait: false, parameters: [string(name: 'VERSION', value: params.VERSION), string(name: 'PASS_VERSION', value: env.VERSION)]
+	    build job: 'test\branch1' , wait: false, parameters: [string(name: 'VERSION', value: params.VERSION), string(name: 'PASS_VERSION', value: env.VERSION)]
 	    }
  	 }
   }
