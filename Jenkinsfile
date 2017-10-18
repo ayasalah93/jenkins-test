@@ -3,11 +3,11 @@ pipeline {
     	 environment {
         	VERSION = VersionNumber([projectStartDate: '2017-08-01',versionNumberString: '${BUILDS_ALL_TIME}', versionPrefix: '']);	
 				}
-	/*parameters
+	parameters
 	  {	
-	    string(name: 'VERSION', defaultValue: 'VERSION', description: 'pass version value')
+		  string(name: 'VERSION', defaultValue: '${VERSION}', description: 'pass version value')
 
-	  } */
+	  } 
     stages {
       
     stage('version')
