@@ -1,9 +1,9 @@
 pipeline {
     agent any
-    	/* environment {
+    	 environment {
         	VERSION = VersionNumber([projectStartDate: '2017-08-01',versionNumberString: '${BUILDS_ALL_TIME}', versionPrefix: '']);	
 				}
-	parameters
+	/*parameters
 	  {	
 		  string(name: 'VERSION', defaultValue: '${VERSION}', description: 'pass version value')
 
@@ -14,7 +14,7 @@ pipeline {
  	 {
 	    steps
 	    {
-	    build job: 'branch1' , wait: false, parameters: [string(name: 'VERSION', value: VersionNumber([projectStartDate: '2017-08-01',versionNumberString: '${BUILDS_ALL_TIME}', versionPrefix: '']))]
+		    build job: 'branch1' , wait: false, parameters: [string(name: 'VERSION', value: ${VERSION})]
 	    sh "echo '$VERSION'"
 	        
 	    }
