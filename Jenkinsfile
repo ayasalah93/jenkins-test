@@ -1,3 +1,3 @@
 node {
-  echo "Hello ${VERSION}"
+  echo "Hello ${env.VERSION}"
 }
