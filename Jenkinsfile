@@ -14,7 +14,7 @@ pipeline {
  	 {
 	    steps
 	    {
-	    build job: 'test\branch1' , wait: false, parameters: [string(name: 'VERSION', value: VersionNumber([projectStartDate: '2017-08-01',versionNumberString: '${BUILDS_ALL_TIME}', versionPrefix: '']))]
+	    build job: 'branch1' , wait: false, parameters: [string(name: 'VERSION', value: VersionNumber([projectStartDate: '2017-08-01',versionNumberString: '${BUILDS_ALL_TIME}', versionPrefix: '']))]
 	    sh "echo '$VERSION'"
 	        
 	    }
