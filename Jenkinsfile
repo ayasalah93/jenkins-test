@@ -14,7 +14,7 @@ pipeline {
  	 {
 	    steps
 	    {
-		    build job: 'branch1' , wait: false, parameters: [string(name: 'VERSION', value: ${VERSION})]
+		    build job: 'branch1' , wait: false, parameters: [string(name: 'VERSION', value: VERSION)]
 	    sh "echo '$VERSION'"
 	        
 	    }
